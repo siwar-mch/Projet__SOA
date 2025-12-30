@@ -1,90 +1,102 @@
-# SOA Project – Person Management Application
+# 📋 SOA Project – Person Management Application
 
-## 📌 Description
-This project is a web application developed as part of the **Service-Oriented Architecture (SOA)** course.
-It demonstrates the design, implementation, and consumption of **RESTful web services** using a modern frontend and a Java backend.
+## 📌 Description du projet  
+Ce projet est une **application web** développée dans le cadre du cours d’**Architecture Orientée Services (SOA)**.  
+Il illustre la conception, l’implémentation et la consommation de **services web RESTful** en utilisant une interface frontend moderne (React.js) et un backend Java (JAX-RS).  
 
-The application allows users to manage persons through a simple and intuitive interface, supporting all basic CRUD operations.
-
----
-
-## 🏗️ Global Architecture
-
-The project follows a **client-server architecture**:
-
-- **Frontend**: React.js  
-- **Backend**: Java (REST services using JAX-RS)  
-- **Server**: Apache Tomcat  
-- **Communication**: HTTP with JSON data format  
-
+L’application permet de **gérer des personnes** via une interface intuitive avec toutes les opérations CRUD :  
+- Affichage de la liste des personnes  
+- Ajout d’une nouvelle personne  
+- Modification d’une personne existante  
+- Suppression d’une personne  
+- Recherche par nom ou ID  
 
 ---
 
-## ✨ Features
+## 🏗️ Architecture globale  
+Le projet suit une **architecture client–serveur** :  
 
-- 📋 Display the list of persons  
-- ➕ Add a new person  
-- ✏️ Edit an existing person  
-- ❌ Delete a person  
-- 🔍 Search persons by name or ID  
-
-All operations are performed through RESTful services.
-
----
-
-## 🔌 REST Services
-
-The backend exposes the following REST endpoints:
-
-| HTTP Method | Endpoint | Description |
-|------------|----------|-------------|
-| GET | `/persons` | Retrieve all persons |
-| GET | `/persons/{id}` | Retrieve a person by ID |
-| GET | `/persons/search?nom=` | Search persons by name |
-| POST | `/persons` | Add a new person |
-| PUT | `/persons/{id}` | Update a person |
-| DELETE | `/persons/{id}` | Delete a person |
+- **Frontend** : React.js (interface utilisateur)  
+- **Backend** : Java – JAX-RS (services REST)  
+- **Serveur d’application** : Apache Tomcat  
+- **Format d’échange** : JSON  
+- **Communication** : HTTP
 
 ---
 
-## 🧩 Frontend Structure
+## 🔧 Technologies utilisées  
 
-The frontend is composed of reusable React components:
-
-- `App.js` – Main application and routing
-- `PersonList` – Displays the list of persons
-- `PersonForm` – Add and edit persons
-- `PersonSearch` – Search functionality
-- `personApi.js` – Centralized API calls using Axios
-
----
-
-## 🛠️ Technologies Used
-
-- React.js
-- Java (JAX-RS)
-- Axios
-- Apache Tomcat
-- REST API
-- JSON
-- Git & GitHub
+- **Frontend** : React.js, Axios, CSS  
+- **Backend** : Java (JAX-RS / Jakarta EE), Maven  
+- **Serveur** : Apache Tomcat 10+  
+- **API** : RESTful, JSON  
+- **Gestion de code** : Git, GitHub  
+- **Outils** : Postman (test des API), IDE (IntelliJ/Eclipse)  
 
 ---
 
-## 🎓 Educational Objectives
+## ▶️ Instructions pour exécuter le projet  
 
-This project applies concepts studied during SOA practical sessions:
-- RESTful service design
-- HTTP methods (GET, POST, PUT, DELETE)
-- Frontend–backend integration
-- Clean architecture and separation of concerns
+### Prérequis  
+- Java JDK 1.8  
+- Apache Tomcat v9.0  
+- Node.js et npm (pour le frontend)  
+- Maven (pour le backend)  
+- Un IDE (IntelliJ, Eclipse, ou VS Code)  
+
+### 1. Cloner le dépôt  
+```bash
+git clone git@github.com:siwar-mch/Projet__SOA.git
+cd Projet__SOA
+```
+
+### 2. Backend (Services REST)  
+1. Importer le projet Maven dans votre IDE  
+2. Configurer Tomcat comme serveur d’application  
+3. Déployer le module backend sur Tomcat  
+4. Lancer le serveur – les API seront accessibles sur :  
+   `http://localhost:8080/projet_soa/projet/`
+
+### 3. Frontend (React)  
+1. Ouvrir un terminal dans le dossier `frontend/`  
+2. Installer les dépendances :  
+   ```bash
+   npm install
+   ```  
+3. Démarrer l’application React :  
+   ```bash
+   npm start
+   ```  
+4. L’interface sera accessible sur :  
+   `http://localhost:3000`
+
+### 4. Vérification  
+- Backend : Accéder à `http://localhost:8080/projet_soa/projet/persons` (doit retourner un JSON vide ou une liste)  
+- Frontend : Ouvrir `http://localhost:3000` et interagir avec l’interface  
 
 ---
 
-## 👩‍💻 Author
+## 🎥 Lien vers la vidéo de démonstration  
+[](https://drive.google.com/file/d/1vABFq5fjcrWSCFdnyGmTtV72g7gYo1OB/view?usp=sharing)
 
+La vidéo montre :  
+- Le déploiement du backend  
+- L’exécution du frontend  
+- Les fonctionnalités CRUD en action  
+- Les appels API via le navigateur/Postman  
+
+---
+
+## 📚 Objectifs pédagogiques  
+Ce projet met en pratique les concepts vus en cours :  
+- Conception de services RESTful  
+- Utilisation des méthodes HTTP (GET, POST, PUT, DELETE)  
+- Intégration frontend–backend  
+- Architecture modulaire et séparation des couches  
+
+---
+
+## 👩‍💻 Auteur  
 **Siwar Mchirgui**  
-Computer Science Student  
-SOA Project – Academic Year 2025–2026
-
-
+Étudiante en informatique  
+Projet SOA – Année universitaire 2025–2026  
